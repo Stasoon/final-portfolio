@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.bioSection h1 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.bioSection p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  max-width: 800px;
+}
+
+.projectsSection h2 {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.projectsGrid {
+  display: grid;
+  /* Робимо сітку, яка автоматично адаптується під розмір екрану */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.projectCategory {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(150, 150, 150, 0.1);
+}
+
+.projectCategory:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.projectCategory h3 {
+  margin-top: 0;
+  color: var(--accent-color);
+  border-bottom: 1px dashed var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+.projectCategory ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projectCategory li {
+  margin-bottom: 0.8rem;
+}
+
+.projectCategory a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.projectCategory a:hover {
+  color: var(--accent-color);
+}
+
+/* Проста анімація появи сторінки */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
